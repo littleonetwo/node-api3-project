@@ -2,6 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
+let database = require('./postDb.js');
+
+
 router.get('/', (req, res) => {
   // do your magic!
 });
@@ -20,8 +23,13 @@ router.put('/:id', (req, res) => {
 
 // custom middleware
 
-function validatePostId(req, res, next) {
-  // do your magic!
+function validatePostId() {
+  // next();
+
+
 }
+
+
+
 
 module.exports = router;
